@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/curCountryFlag"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/curCountryLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:text="Country: "
+        android:textColor="@color/gray"
+        android:textSize="26sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/curCountryFlag" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/curCountryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/curCountryLayout"
+        app:layout_constraintStart_toEndOf="@+id/curCountryLayout"
+        app:layout_constraintTop_toBottomOf="@+id/curCountryFlag"
+        app:layout_constraintTop_toTopOf="@+id/curCountryLayout"
+        tools:text="Canada" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/curCountryCapitalLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:text="Capital: "
+        android:textColor="@color/gray"
+        android:textSize="28sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/curCountryLayout" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/curCountryCapital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/curCountryCapitalLayout"
+        app:layout_constraintTop_toTopOf="@+id/curCountryCapitalLayout"
+        tools:text="Toronto" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

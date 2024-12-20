@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/allCountriesFragment">
+
+    <fragment
+        android:id="@+id/allCountriesFragment"
+        android:name="com.example.flagsapp.presentation.screens.allCountries.AllCountriesFragment"
+        android:label="AllCountriesFragment"
+        tools:layout="@layout/fragment_all_countries">
+        <action
+            android:id="@+id/action_allCountriesFragment_to_countryDetailsFragment"
+            app:destination="@id/countryDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/countryDetailsFragment"
+        android:name="com.example.flagsapp.presentation.screens.countryDetails.CountryDetailsFragment"
+        android:label="CountryDetailsFragment"
+        tools:layout="@layout/fragment_country_details">
+        <argument
+            android:name="currentCountry"
+            app:argType="com.example.flagsapp.domain.model.Country" />
+    </fragment>
+
+</navigation>
